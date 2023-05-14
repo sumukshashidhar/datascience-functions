@@ -14,7 +14,7 @@ def __guard_clauses(
     day_column: str,
 ) -> bool:
     """
-    Guard clauses for split_date_column function. 
+    Guard clauses for split_date_column function.
     Checks if the arguments are of the correct type and valid values.
     """
     assert isinstance(
@@ -26,7 +26,9 @@ def __guard_clauses(
         assert isinstance(
             column, str
         ), f"{column} must be of type str, not {type(column)}."
-        assert column not in data_frame.columns, f"{column} already present in dataframe."
+        assert (
+            column not in data_frame.columns
+        ), f"{column} already present in dataframe."
     return True
 
 
@@ -38,7 +40,7 @@ def split_date_column(
     day_column: str = "day",
 ) -> pd.DataFrame:
     """
-    Takes a date column in a 
+    Takes a date column in a
     dataframe and splits it into three columns: Year, Month, and Day.
 
     Args:
