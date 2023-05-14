@@ -65,6 +65,29 @@
             ],
             "language" : "python",
             "path" : "drop_single_value.py"
+        },
+        {
+            "name": "drop_duplicate_columns",
+            "description": "Drop identical columns from a pandas dataframe, even if they have different names",
+            "inputs": [
+                {
+                    "name": "data_frame",
+                    "type": "pd.DataFrame",
+                    "description": "The dataframe to drop columns from"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "data_frame",
+                    "type": "pd.DataFrame",
+                    "description": "The dataframe with the columns dropped"
+                }
+            ],
+            "dependencies": [
+                "pandas"
+            ],
+            "language": "python",
+            "path": "drop_duplicate_columns.py"
         }
     ]
 }

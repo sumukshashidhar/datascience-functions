@@ -3,17 +3,7 @@ Python function to drop all columns in a dataframe that contain only one value.
 """
 # processed
 import pandas as pd
-
-
-def __guard_clauses(data_frame: pd.DataFrame) -> bool:
-    """
-    Guard clauses for drop_single_value function.
-    Checks if the arguments are of the correct type and valid values.
-    """
-    assert isinstance(
-        data_frame, pd.DataFrame
-    ), f"data_frame must be of type pandas.DataFrame, not {type(data_frame)}."
-    return True
+from _dataframe_guard_clauses import __guard_clauses
 
 
 def drop_single_value(data_frame: pd.DataFrame) -> pd.DataFrame:
