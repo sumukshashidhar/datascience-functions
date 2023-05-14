@@ -5,7 +5,7 @@
             "description" : "Split a given date column in a pandas dataframe into day, month and year columns",
             "inputs" : [
                 {
-                    "name" : "df",
+                    "name" : "data_frame",
                     "type" : "pd.DataFrame",
                     "description" : "The dataframe to split"
                 },
@@ -32,7 +32,7 @@
             ],
             "outputs" : [
                 {
-                    "name" : "df",
+                    "name" : "data_frame",
                     "type" : "pd.DataFrame",
                     "description" : "The dataframe with the new columns"
                 }
@@ -42,6 +42,29 @@
             ],
             "language" : "python",
             "path" : "split_date_column.py"
+        },
+        {
+            "name" : "drop_single_value",
+            "description" : "Drop columns from a pandas dataframe that have only a single value",
+            "inputs" : [
+                {
+                    "name" : "data_frame",
+                    "type" : "pd.DataFrame",
+                    "description" : "The dataframe to drop columns from"
+                }
+            ],
+            "outputs" : [
+                {
+                    "name" : "data_frame",
+                    "type" : "pd.DataFrame",
+                    "description" : "The dataframe with the columns dropped"
+                }
+            ],
+            "dependencies" : [
+                "pandas"
+            ],
+            "language" : "python",
+            "path" : "drop_single_value.py"
         }
     ]
 }
