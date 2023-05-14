@@ -1,0 +1,47 @@
+{
+    "functions": [
+        {
+            "name" : "split_date_column",
+            "description" : "Split a given date column in a pandas dataframe into day, month and year columns",
+            "inputs" : [
+                {
+                    "name" : "df",
+                    "type" : "pd.DataFrame",
+                    "description" : "The dataframe to split"
+                },
+                {
+                    "name" : "date_column",
+                    "type" : "string",
+                    "description" : "The name of the date column to split"
+                },
+                {
+                    "name" : "day_column",
+                    "type" : "string",
+                    "description" : "The name of the day column to create"
+                },
+                {
+                    "name" : "month_column",
+                    "type" : "string",
+                    "description" : "The name of the month column to create"
+                },
+                {
+                    "name" : "year_column",
+                    "type" : "string",
+                    "description" : "The name of the year column to create"
+                }
+            ],
+            "outputs" : [
+                {
+                    "name" : "df",
+                    "type" : "pd.DataFrame",
+                    "description" : "The dataframe with the new columns"
+                }
+            ],
+            "dependencies" : [
+                "pandas"
+            ],
+            "language" : "python",
+            "path" : "split_date_column.py"
+        }
+    ]
+}
